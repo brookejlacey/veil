@@ -1,7 +1,7 @@
 {
-	"name": "cofhe-hardhat-starter",
-	"version": "0.3.1",
-	"description": "Starter repository for Fhenix CoFHE contract development",
+	"name": "veil",
+	"version": "0.1.0",
+	"description": "Blind Negotiation Protocol — FHE-powered private deal settlement on Fhenix",
 	"scripts": {
 		"test": "REPORT_GAS=true hardhat test",
 		"clean": "rimraf ./artifacts ./cache ./coverage ./types ./coverage.json ./deployments/localcofhe",
@@ -31,7 +31,12 @@
 		"//   -------------------": "",
 		"arb-sepolia:deploy-counter": "hardhat deploy-counter --network arb-sepolia",
 		"arb-sepolia:increment-counter": "hardhat increment-counter --network arb-sepolia",
-		"arb-sepolia:reset-counter": "hardhat reset-counter --network arb-sepolia"
+		"arb-sepolia:reset-counter": "hardhat reset-counter --network arb-sepolia",
+		"// ----------------------": "",
+		"//  --- veil ---": "",
+		"//   ----------------------": "",
+		"eth-sepolia:deploy-veil": "hardhat deploy-veil --network eth-sepolia",
+		"arb-sepolia:deploy-veil": "hardhat deploy-veil --network arb-sepolia"
 	},
 	"repository": {
 		"type": "git",
