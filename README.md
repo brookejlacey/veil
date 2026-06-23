@@ -4,6 +4,13 @@
 
 Built on [Fhenix](https://fhenix.io) CoFHE (Fully Homomorphic Encryption on EVM).
 
+## Live on Sepolia
+
+`VeilNegotiation` is deployed and source-verified on Ethereum Sepolia (a Fhenix CoFHE testnet).
+
+- **Contract:** [`0xe0cCA01C8bB5961a97A1264F38aba01ABD997e7b`](https://sepolia.etherscan.io/address/0xe0cCA01C8bB5961a97A1264F38aba01ABD997e7b)
+- **Verified source (Sourcify, exact match):** [sourcify.dev](https://sourcify.dev/#/lookup/0xe0cCA01C8bB5961a97A1264F38aba01ABD997e7b)
+
 ## Why FHE, and not ZK or a transparent chain
 
 A negotiation has a hard requirement that most privacy tooling cannot meet: the chain has to *compute on numbers it is not allowed to see*. Walk through the options.

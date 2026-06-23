@@ -42,12 +42,17 @@ const config: HardhatUserConfig = {
 		},
 	},
 
-	// Optional: Add Etherscan verification config
+	// Etherscan verification (used when an API key is set)
 	etherscan: {
 		apiKey: {
 			'eth-sepolia': process.env.ETHERSCAN_API_KEY || '',
 			'arb-sepolia': process.env.ARBISCAN_API_KEY || '',
 		},
+	},
+
+	// Keyless source verification via Sourcify (no API key required)
+	sourcify: {
+		enabled: true,
 	},
 }
 
