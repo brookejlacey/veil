@@ -1,41 +1,39 @@
-# Veil — Blind Negotiation Protocol
+# Roadmap
 
-## Wave 1: Core Primitive (Mar 21–28) — $3K
-- [x] Two-party blind negotiation contract
-- [x] Encrypted limit submission (seller floor / buyer ceiling)
-- [x] FHE overlap detection (`gte` on ciphertext)
-- [x] Midpoint settlement computation on encrypted values
-- [x] `select`-based conditional settlement (deal vs no-deal)
-- [x] Hardhat tests with mock FHE
-- [x] Deploy tasks for testnets
-- [ ] Deploy to Arbitrum Sepolia
-- [ ] Record demo walkthrough
+Where Veil is and where it is headed. The core primitive is built and tested; everything below extends it.
 
-## Wave 2: Multi-Term Negotiation (Mar 30–Apr 6) — $5K
-- [ ] Extend beyond single price: price + quantity + timeline as encrypted terms
-- [ ] Weighted scoring on encrypted multi-dimensional offers
-- [ ] Partial match resolution (agree on some terms, re-negotiate others)
-- [ ] Negotiation expiry / timeout mechanics
-- [ ] Basic frontend with @cofhe/react hooks
+## Shipped: the core primitive
 
-## Wave 3: Multi-Party Marketplace (Apr 8–May 8) — $12K
-- [ ] N-party matching: multiple buyers + multiple sellers
-- [ ] Optimal pairing algorithm on encrypted orderbook
-- [ ] Batch settlement for matched pairs
-- [ ] Reputation system (encrypted trade history, FHE-computed scores)
-- [ ] Integration with Privara SDK for encrypted payment settlement
-- [ ] Full frontend with live negotiation UX
+- Two-party blind negotiation contract
+- Encrypted limit submission (seller floor, buyer ceiling)
+- Overlap detection on ciphertext (`FHE.gte`)
+- Midpoint settlement computed on encrypted values
+- Conditional settlement with `FHE.select` (deal vs no-deal, zero leakage on failure)
+- Per-party access control on the encrypted result (`FHE.allow`)
+- Full lifecycle test suite against the CoFHE mock coprocessor
+- One-command narrated end-to-end demo (`npx hardhat demo`)
+- Deploy and interaction tasks for Arbitrum Sepolia and Ethereum Sepolia
 
-## Wave 4: Vertical Integration (May 11–20) — $14K
-- [ ] Real-world vertical: OTC crypto desk or B2B procurement
-- [ ] Escrow integration: locked funds release on settlement
-- [ ] Encrypted audit trail with selective disclosure for compliance
-- [ ] Multi-round negotiation (counter-offers on ciphertext)
-- [ ] Gas optimization and contract upgradability
+## Next: multi-term negotiation
 
-## Wave 5: Production Ready (May 23–Jun 1) — $14K + $2K bonus
-- [ ] Mainnet deployment preparation
-- [ ] Security audit prep and formal verification
-- [ ] SDK/API for third-party integration
-- [ ] Documentation and developer onboarding
-- [ ] Demo: live blind negotiation between two wallets
+- Negotiate more than price: quantity, timeline, and other terms as encrypted fields
+- Weighted scoring across encrypted multi-dimensional offers
+- Partial-match resolution (agree on some terms, re-negotiate the rest)
+- Expiry and timeout mechanics
+- A minimal frontend using cofhejs in the browser
+
+## Later: multi-party matching
+
+- N-party matching across multiple buyers and sellers
+- Pairing over an encrypted orderbook
+- Batch settlement for matched pairs
+- Encrypted reputation derived from trade history
+- Counter-offers on ciphertext across multiple rounds
+
+## Toward production
+
+- A real-world vertical (OTC desk or B2B procurement) as the first integration
+- Escrow: locked funds release on settlement
+- Encrypted audit trail with selective disclosure for compliance
+- Gas optimization and an upgrade path
+- Security audit and mainnet deployment

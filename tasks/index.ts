@@ -1,6 +1,4 @@
-export * from './deploy-counter'
-export * from './increment-counter'
-export * from './reset-counter'
 export * from './deploy-veil'
 export * from './create-negotiation'
 export * from './submit-limit'
+export * from './demo'

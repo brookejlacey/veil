@@ -1,53 +1,27 @@
 {
 	"name": "veil",
 	"version": "0.1.0",
-	"description": "Blind Negotiation Protocol — FHE-powered private deal settlement on Fhenix",
+	"description": "Blind Negotiation Protocol: FHE-powered private deal settlement on Fhenix",
 	"scripts": {
-		"test": "REPORT_GAS=true hardhat test",
-		"clean": "rimraf ./artifacts ./cache ./coverage ./types ./coverage.json ./deployments/localcofhe",
 		"compile": "hardhat compile",
-		"--------------": "",
-		" --- cofhe ---": "",
-		"  --------------": "",
-		"// task:deploy": "hardhat deploy",
-		"// task:addCount": "hardhat task:addCount",
-		"// task:getCount": "hardhat task:getCount",
-		"// ------------------- ": "",
-		"//  --- localcofhe ---": "",
-		"//    -------------------": "",
-		"// localcofhe:start": "hardhat localcofhe:start --clean true",
+		"test": "REPORT_GAS=true hardhat test",
+		"demo": "hardhat demo",
+		"clean": "rimraf ./artifacts ./cache ./coverage ./types ./coverage.json ./typechain-types ./deployments/localcofhe",
 		"localcofhe:test": "REPORT_GAS=true hardhat test --network localcofhe",
 		"localcofhe:faucet": "hardhat task:cofhe:usefaucet --network localcofhe",
-		"// localcofhe:deploy": "hardhat deploy --network localcofhe",
-		"// localcofhe:stop": "hardhat localcofhe:stop",
-		"// --------------------": "",
-		"//  --- sepolia ---": "",
-		"//   --------------------": "",
-		"eth-sepolia:deploy-counter": "hardhat deploy-counter --network eth-sepolia",
-		"eth-sepolia:increment-counter": "hardhat increment-counter --network eth-sepolia",
-		"eth-sepolia:reset-counter": "hardhat reset-counter --network eth-sepolia",
-		"// -------------------": "",
-		"//  --- arbitrum-sepolia ---": "",
-		"//   -------------------": "",
-		"arb-sepolia:deploy-counter": "hardhat deploy-counter --network arb-sepolia",
-		"arb-sepolia:increment-counter": "hardhat increment-counter --network arb-sepolia",
-		"arb-sepolia:reset-counter": "hardhat reset-counter --network arb-sepolia",
-		"// ----------------------": "",
-		"//  --- veil ---": "",
-		"//   ----------------------": "",
 		"eth-sepolia:deploy-veil": "hardhat deploy-veil --network eth-sepolia",
 		"arb-sepolia:deploy-veil": "hardhat deploy-veil --network arb-sepolia"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/fhenixprotocol/cofhe-hardhat-starter.git"
+		"url": "git+https://github.com/brookejlacey/veil.git"
 	},
-	"author": "Fhenix",
+	"author": "Brooke Lacey",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/fhenixprotocol/cofhe-hardhat-starter/issues"
+		"url": "https://github.com/brookejlacey/veil/issues"
 	},
-	"homepage": "https://github.com/fhenixprotocol/cofhe-hardhat-starter#readme",
+	"homepage": "https://github.com/brookejlacey/veil#readme",
 	"devDependencies": {
 		"@fhenixprotocol/cofhe-contracts": "^0.0.13",
 		"@fhenixprotocol/cofhe-mock-contracts": "^0.3.1",
@@ -76,11 +50,5 @@
 		"ts-node": ">=8.0.0",
 		"typechain": "^8.3.0",
 		"typescript": ">=4.5.0"
-	},
-	"devDependencies2": {
-		"@fhenixprotocol/cofhe-contracts": "0.0.13",
-		"@fhenixprotocol/cofhe-mock-contracts": "^0.3.0",
-		"cofhe-hardhat-plugin": "^0.3.0",
-		"cofhejs": "^0.3.0"
 	}
 }

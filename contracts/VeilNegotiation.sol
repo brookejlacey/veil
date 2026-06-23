@@ -3,7 +3,7 @@ pragma solidity ^0.8.25;
 
 import "@fhenixprotocol/cofhe-contracts/FHE.sol";
 
-/// @title Veil — Blind Negotiation Protocol
+/// @title Veil: Blind Negotiation Protocol
 /// @notice Two parties negotiate without revealing their positions.
 ///         The contract determines if a deal exists and settles at the midpoint.
 contract VeilNegotiation {

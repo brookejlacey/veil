@@ -1,3 +1,5 @@
+// Must be imported before any module that pulls in cofhejs (see file for why).
+import './test-helpers/localstorage-shim'
 import { HardhatUserConfig } from 'hardhat/config'
 import '@nomicfoundation/hardhat-toolbox'
 import '@nomicfoundation/hardhat-ethers'
